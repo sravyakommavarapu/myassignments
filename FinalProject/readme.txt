@@ -1,0 +1,1 @@
+Use "user" as userid and "pass" as password while running the project
