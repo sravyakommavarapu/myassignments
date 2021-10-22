@@ -1,34 +1,38 @@
 package state;
 
 public class ReachedCreditLimit implements State {
-
+	CreditCard creditCard;
+	 
+    public ReachedCreditLimit(CreditCard creditCard) {
+        this.creditCard = creditCard;
+    }
+ 
 	@Override
 	public void enterAmount() {
-		// TODO Auto-generated method stub
-
+       System.out.println("you cant enter money, your credit limit is reached");
 	}
 
 	@Override
-	public void debitAmount() {
-		// TODO Auto-generated method stub
+	public void makePayment(){
+		System.out.println("you cant debit, you haven't entered money you want to debit yet");
 
 	}
 
 	@Override
 	public void pressOk() {
-		// TODO Auto-generated method stub
+		System.out.println("you pressed ok, but there is no credit limit");
 
 	}
 
 	@Override
 	public void dispense() {
-		// TODO Auto-generated method stub
+		System.out.println("no money dispensed");
 
 	}
 
 	@Override
 	public void reset() {
-		// TODO Auto-generated method stub
+		creditCard.setState(creditCard.getHasCreditLimit());
 
 	}
 

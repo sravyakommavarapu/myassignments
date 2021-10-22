@@ -2,13 +2,13 @@ package composite;
 
 import state.CreditCard;
 
-public class VisaAccount extends CreditAccount {
+public class MasterAccount extends CreditAccount {
 	private double creditLimit;
 	private double balance;
 	private double monthlyDue;
 	private String cardNumber;
 
-	public VisaAccount(double userCreditLimit, double userBalance, double userMonthlyDue, String userCardNumber) {
+	public MasterAccount(double userCreditLimit, double userBalance, double userMonthlyDue, String userCardNumber) {
 		creditLimit = userCreditLimit;
 		cardNumber = userCardNumber;
 		balance = userBalance;
@@ -16,15 +16,15 @@ public class VisaAccount extends CreditAccount {
 	}
 
 	public void accountdetails() {
-		System.out.println("Type of Account: Master Account");
+		System.out.println("Type of Account: Visa Account");
 		System.out.println("Account number:" + cardNumber);
-		System.out.println("Total Credit Limit: $" + creditLimit);
+		System.out.println("Account Balance: $" + creditLimit);
 	}
-
+	
 	public void checkbalance() {
 		System.out.println(balance);
 	}
-	
+
 	public void viewMonthlyDue() {
 		System.out.println(monthlyDue);
 	}

@@ -2,28 +2,28 @@ package composite;
 
 import visitor.Visitor;
 
-public class SavingsAccount extends CashAccount{
+public class CheckingAccount extends CashAccount{
 
 	public double balance;
 	private String accountNumber;
 	public double amount;
-
-	public SavingsAccount(double userBalance, String userAccountNumber) {
+	
+	public CheckingAccount(double userBalance, String userAccountNumber) {
 		balance = userBalance;
 		accountNumber = userAccountNumber;
 	}
 	public void accept(Visitor visitor) {
 		visitor.visit(this);
 	}
-
 	public void setAmount(double amount) {
 		this.amount = amount;
 	}
+
 	public void accountdetails() {
-		System.out.println("Type of Account: Savings Account");
+		System.out.println("Type of Account: Checking Account");
 		System.out.println("Account number:" + accountNumber);
 		System.out.println("Account Balance: $"+balance);
-		}
+	}
 
 	public void checkbalance() {
 		System.out.println(balance);

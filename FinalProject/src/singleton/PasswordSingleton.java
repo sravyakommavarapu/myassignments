@@ -1,4 +1,4 @@
-package Singleton;
+package singleton;
 
 public class PasswordSingleton extends Validation {
 	//protected static Validation uniqueInstance;

@@ -1,4 +1,4 @@
-package Singleton;
+package singleton;
 
 public class UserSingleton extends Validation{
 	

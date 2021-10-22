@@ -1,9 +1,9 @@
-package Singleton;
+package singleton;
 
 public class Validation {
 	protected static Validation uniqueInstance;
-	public static final int userID = 12345;
-	public static final String pass = "abc";
+	public static final String userID = "user";
+	public static final String pass = "pass";
 	 
 	// other useful instance variables here
  

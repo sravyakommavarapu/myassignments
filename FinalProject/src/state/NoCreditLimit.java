@@ -1,35 +1,42 @@
 package state;
 
-public class NoCreditLimit implements State{
 
+
+
+public class NoCreditLimit implements State{
+	CreditCard creditCard;
+	 
+    public NoCreditLimit(CreditCard creditCard) {
+        this.creditCard = creditCard;
+    }
+	
 	@Override
 	public void enterAmount() {
-		// TODO Auto-generated method stub
-		
+        System.out.println("you cant enter money twice");
 	}
 
 	@Override
-	public void debitAmount() {
-		// TODO Auto-generated method stub
-		
+	public void makePayment() {
+		System.out.println("You exceeded your credit limit. so, you can't debit money");
 	}
 
 	@Override
 	public void pressOk() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("you entered money, but there you exceeded credit limit");
 	}
 
 	@Override
 	public void dispense() {
-		// TODO Auto-generated method stub
-		
+		System.out.println("you need to enter money first");
 	}
 
 	@Override
 	public void reset() {
-		// TODO Auto-generated method stub
 		
+		
+	}
+	public String toString() {
+		return "waiting to set credit limit";
 	}
 
 }
